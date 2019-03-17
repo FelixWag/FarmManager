@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sepm.ss17.e1429339.gui.EditController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="216.0" prefWidth="356.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.60000610351562" minWidth="10.0" prefWidth="108.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="248.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Fenster:" />
+            <Label text="Einstreu:" GridPane.rowIndex="1" />
+            <Label text="Drinnen:" GridPane.rowIndex="2" />
+            <Label text="Größe:" GridPane.rowIndex="3" />
+            <Label text="Bereich" GridPane.rowIndex="4" />
+            <Label text="Tagessatz:" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="litterChoice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="box_sizeField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="areaChoice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="daily_rateField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <CheckBox fx:id="windowCheck" mnemonicParsing="false" GridPane.columnIndex="1" />
+            <CheckBox fx:id="insideCheck" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button layoutX="248.0" layoutY="240.0" mnemonicParsing="false" onAction="#onUpdateButtonClicked" text="Update" />
+      <Button fx:id="buttonClose" layoutX="315.0" layoutY="240.0" mnemonicParsing="false" onAction="#onCloseButtonClicked" text="Schließen" />
+      <ImageView fx:id="photoImageView" fitHeight="150.0" fitWidth="200.0" layoutX="411.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="464.0" layoutY="197.0" mnemonicParsing="false" onAction="#onSelectButtonClicked" text="Bild auswählen" />
+   </children>
+</AnchorPane>

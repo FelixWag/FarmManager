@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sepm.ss17.e1429339.gui.ReservationTabController">
+   <children>
+      <DatePicker fx:id="fromDatePicker" layoutX="22.0" layoutY="70.0" prefHeight="25.0" prefWidth="131.0" />
+      <DatePicker fx:id="toDatePicker" layoutX="180.0" layoutY="70.0" prefHeight="25.0" prefWidth="123.0" />
+      <TableView fx:id="resTableView" layoutX="22.0" layoutY="122.0" prefHeight="200.0" prefWidth="447.0">
+        <columns>
+          <TableColumn fx:id="res_idCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="customerCol" prefWidth="119.0" text="Kundenname" />
+            <TableColumn fx:id="fromCol" prefWidth="135.0" text="Von" />
+            <TableColumn fx:id="toCol" prefWidth="117.0" text="Bis" />
+        </columns>
+      </TableView>
+      <Button layoutX="382.0" layoutY="70.0" mnemonicParsing="false" onAction="#onSearchAllClicked" text="Alle anzeigen" />
+      <Button layoutX="319.0" layoutY="70.0" mnemonicParsing="false" onAction="#onFilterButtonClicked" text="Filtern" />
+      <Label layoutX="77.0" layoutY="52.0" text="Von" />
+      <Label layoutX="238.0" layoutY="52.0" text="Bis" />
+      <Button layoutX="22.0" layoutY="344.0" mnemonicParsing="false" onAction="#onEditButtonClicked" text="Bearbeiten" />
+      <Button layoutX="101.0" layoutY="344.0" mnemonicParsing="false" onAction="#onDeleteButtonClicked" text="Löschen" />
+      <Button layoutX="168.0" layoutY="344.0" mnemonicParsing="false" onAction="#onDetailsButtonClicked" text="Details" />
+      <Button layoutX="466.0" layoutY="372.0" mnemonicParsing="false" onAction="#onAddButtonClicked" text="Hinzufügen" />
+      <Label layoutX="559.0" layoutY="122.0" text="ID:" />
+      <Label layoutX="505.0" layoutY="147.0" text="Kundenname:" />
+      <Label layoutX="554.0" layoutY="171.0" text="Von:" />
+      <Label layoutX="558.0" layoutY="195.0" text="Bis:" />
+      <Label layoutX="481.0" layoutY="222.0" text="Boxen und Pferde:" />
+      <Label fx:id="idLabel" layoutX="584.0" layoutY="122.0" text="-" />
+      <Label fx:id="customerLabel" layoutX="584.0" layoutY="147.0" text="-" />
+      <Label fx:id="fromLabel" layoutX="584.0" layoutY="171.0" text="-" />
+      <Label fx:id="toLabel" layoutX="584.0" layoutY="195.0" text="-" />
+      <Label layoutX="291.0" layoutY="346.0" text="Von:" />
+      <Label layoutX="294.0" layoutY="376.0" text="Bis:" />
+      <DatePicker fx:id="addFromDatePicker" layoutX="330.0" layoutY="342.0" prefHeight="25.0" prefWidth="123.0" />
+      <DatePicker fx:id="addToDatePicker" layoutX="331.0" layoutY="372.0" prefHeight="25.0" prefWidth="123.0" />
+      <Label layoutX="238.0" layoutY="407.0" text="Kundenname:" />
+      <TextField fx:id="customerTextField" layoutX="330.0" layoutY="403.0" prefHeight="25.0" prefWidth="123.0" />
+      <Button layoutX="620.0" layoutY="372.0" mnemonicParsing="false" onAction="#onPickUpButtonClicked" text="Pferd abholen" />
+      <ScrollPane layoutX="584.0" layoutY="221.0" prefHeight="17.0" prefWidth="233.0">
+         <content>
+            <Label fx:id="boxAndHorseLabel" text="-" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
